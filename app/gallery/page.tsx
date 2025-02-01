@@ -20,7 +20,7 @@ export default function Gallery() {
             Gallery
           </h1>
           <div className="justify-center grid md:grid-cols-3 gap-4 pt-4">
-            <p className="marcellus-regs text-xl leading-7 text-gray-700 dark:text-gray-300 col-span-1">
+            <p className="marcellus-regs text-lg leading-7 text-gray-700 dark:text-gray-300 col-span-1">
               Here are some photos of us
               <br />
               sharing moments together.
@@ -40,7 +40,7 @@ export default function Gallery() {
               Under the sun, beneath the stars.
               <br />
             </p>
-            <p className="marcellus-regs text-bold text-lg leading-7 text-gray-700 dark:text-gray-300 col-span-1">
+            <p className="marcellus-regs text-lg leading-7 text-gray-700 dark:text-gray-300 col-span-1">
               Together in snow, sliding with glee,
               <br />
               Solving puzzles, just you and me.
