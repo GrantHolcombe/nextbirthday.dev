@@ -23,7 +23,7 @@ export default function Schedule() {
             </span>
           </p>
           <p className="text-center marcellus-regs text-gray-700 dark:text-gray-300 text-md leading-7">
-            12345 Main St, Cupertino, CA 92109
+            1234 Emacs Avenue, Cupertino, CA 91234
           </p>
         </div>
         <div className="container py-12">
