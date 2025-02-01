@@ -7,10 +7,6 @@ import {
 } from "@/models/guests_model";
 import { NextResponse } from "next/server";
 
-interface RequestParams {
-  a: string;
-}
-
 const get_formatted_guests = async () => {
   const guests = await get_all_guests();
 
@@ -38,22 +34,22 @@ const get_formatted_guest_party = async (
 
 export async function POST(
   request: Request,
-  { params }: { params: RequestParams },
+  { params }: { params: Promise<{ a: string }> },
 ) {
+  const { a } = await params;
   try {
-    if (params.a === "get_formatted_guests") {
+    if (a === "get_formatted_guests") {
       const guests = await get_formatted_guests();
       return NextResponse.json(guests);
-    } else if (params.a === "update_rsvp_info_many") {
+    } else if (a === "update_rsvp_info_many") {
       const { updatedGuests } = await request.json();
       await update_rsvp_info_many(updatedGuests);
       return NextResponse.json({ message: "RSVP info updated successfully!" });
-    } else if (params.a === "get_guest_info_from_name") {
+    } else if (a === "get_guest_info_from_name") {
       const { first_name, last_name } = await request.json();
       const guest_info = await get_formatted_guest_party(first_name, last_name);
-      console.log(guest_info);
       return NextResponse.json(guest_info);
-    } else if (params.a === "get_guests_for_admin_table") {
+    } else if (a === "get_guests_for_admin_table") {
       const guests = await get_guests_for_admin_table();
       return NextResponse.json(guests);
     }
