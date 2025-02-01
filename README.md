@@ -14,6 +14,30 @@ pnpm dev
 bun dev
 ```
 
+
+
+##  Customize Your Wedding Website
+
+To make this site truly yours, update the configuration file with your wedding details.
+
+Head over to:
+
+```sh
+/data/site_config.js
+```
+
+## Example Update:
+
+```js
+export const site_config = {
+  groom: "Bob",
+  bride: "Alice",
+  weddingDate: "2025-06-15",
+  venue: "Sunset Beach Resort, Hawaii",
+  rsvpDeadline: "2025-05-01",
+};
+```
+
 ## Setup Postgres server
 
 (Optional) Go to [vercel's serverless postgres](https://vercel.com/marketplace/neon) and deploy a vercel serverless postgresql db through 'Neon'.
