@@ -3,19 +3,27 @@ import {
   get_main_and_secondary_guests,
   get_guests_for_admin_table,
   update_rsvp_info_many,
+  Guest,
 } from "@/models/guests_model";
 import { NextResponse } from "next/server";
+
+interface RequestParams {
+  a: string;
+}
 
 const get_formatted_guests = async () => {
   const guests = await get_all_guests();
 
-  return guests.map((guest) => ({
+  return guests.map((guest: Guest) => ({
     ...guest,
     full_name: `${guest.first_name} ${guest.last_name}`,
   }));
 };
 
-const get_formatted_guest_party = async (first_name, last_name) => {
+const get_formatted_guest_party = async (
+  first_name: string,
+  last_name: string,
+) => {
   const formatted_guest_party = await get_main_and_secondary_guests(
     first_name,
     last_name,
@@ -28,7 +36,10 @@ const get_formatted_guest_party = async (first_name, last_name) => {
   return formatted_guest_party;
 };
 
-export async function POST(request, { params }) {
+export async function POST(
+  request: Request,
+  { params }: { params: RequestParams },
+) {
   try {
     if (params.a === "get_formatted_guests") {
       const guests = await get_formatted_guests();
@@ -47,7 +58,8 @@ export async function POST(request, { params }) {
       return NextResponse.json(guests);
     }
   } catch (error) {
-    if (error.message === "Guest not found") {
+    const err = error as Error;
+    if (err.message === "Guest not found") {
       return NextResponse.json({
         error: `Name not found on the guest list. Please check the spelling and try again.`,
       });
