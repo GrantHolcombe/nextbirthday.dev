@@ -9,7 +9,7 @@ export default function Travel() {
           </h1>
           <p className="text-center marcellus-regs text-lg leading-7 text-gray-700 dark:text-gray-300">
             Below are a list of hotels in the area. We also recommend searching
-            'systemctl weddings' in{" "}
+            &apos;systemctl weddings&apos; in{" "}
             <a
               className="text-blue-500"
               href="https://www.airbnb.com/"

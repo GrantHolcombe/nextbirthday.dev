@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import RSVPLookupForm from "@/components/RSVPLookupForm";
 
 export default function RSVP() {

@@ -49,6 +49,7 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
       }
     } catch (err) {
       setError("There was an error updating your message.");
+      console.log(err);
     }
   };
 

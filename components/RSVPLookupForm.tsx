@@ -1,10 +1,9 @@
-import { FC, useState, useEffect, FormEvent } from "react";
+import { FC, useState, FormEvent } from "react";
 import RSVPConfirmForm from "@/components/RSVPConfirmForm";
 
 const RSVPLookupForm: FC = () => {
   const [first_name, setFirstName] = useState<string>("");
   const [last_name, setLastName] = useState<string>("");
-  const [rsvp_status, setRsvpStatus] = useState<string>("Going");
   const [error, setError] = useState<string | null>(null);
   const [showConfirmForm, setShowConfirmForm] = useState(false);
   const [guestInfo, setGuestInfo] = useState([]);
