@@ -16,6 +16,10 @@ bun dev
 
 ## Setup Postgres server
 
+(Optional) Go to [vercel's serverless postgres](https://vercel.com/marketplace/neon) and deploy a vercel serverless postgresql db through 'Neon'.
+
+
+Here is the create statement for the guests table. It is the only table required. 
 ```sql
 create table public.guests
 (
@@ -31,6 +35,7 @@ create table public.guests
 );
 
 ```
+When adding a guest, the `host` parameter takes in a `'g'` or a `'b'` for the bride/groom. This only affects what will display on the admin view of the table.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
