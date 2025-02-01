@@ -54,7 +54,7 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
 
   if (submittedSuccessfully) {
     return (
-      <div className="flex flex-col items-center justify-center container mx-auto py-2">
+      <div className="flex flex-col items-center text-gray-700 dark:text-gray-300 justify-center container mx-auto py-2">
         <p>{submissionMessage}</p>
         <Link
           href="/"
@@ -70,7 +70,7 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
     <div className="flex flex-col items-center justify-center container mx-auto py-2">
       <>
         <form onSubmit={handleSubmit} className="w-full md:w-1/2 p-4 space-y-4">
-          <p>
+          <p className="text-gray-700 dark:text-gray-300">
             Please confirm the status of you and your guest(s). Edit the name to
             reflect what you want to appear on the table as needed, and confirm
             RSVP status.
@@ -89,7 +89,7 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
                   Going?
                 </th>
               </tr>
-            </thead>{" "}
+            </thead>
             <tbody>
               {updatedGuests.map((guest, idx) => (
                 <tr key={guest.guest_id}>
