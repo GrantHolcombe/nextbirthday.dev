@@ -1,6 +1,7 @@
 import Link from "@/components/Link";
 import Image from "@/components/Image";
 import site_config from "@/data/site_config";
+import moment from "moment";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
             {site_config.description}
           </p>
           <p className="text-center marcellus-regs text-lg leading-7 text-gray-700 dark:text-gray-300">
-            July somthing-th, 2025
+            {moment(site_config.eventDate).format("MMMM Do, YYYY")}
           </p>
         </div>
       </div>
@@ -22,7 +23,7 @@ export default function Home() {
         <div className="-m-4 flex flex-wrap">
           <div className="md max-w-[544px] p-2 md:w-1/2">
             <Image
-              src={"/static/images/engagement1.jpg"}
+              src={"/static/images/karts.jpg"}
               alt="avatar"
               width={544}
               height={306}
@@ -32,7 +33,7 @@ export default function Home() {
           </div>
           <div className="md max-w-[544px] p-2 md:w-1/2">
             <Image
-              src={"/static/images/engagement2.jpg"}
+              src={"/static/images/track.jpg"}
               alt="avatar"
               width={544}
               height={306}

@@ -9,8 +9,7 @@ export default function Schedule() {
             Schedule
           </h1>
           <p className="marcellus-regs text-lg text-center leading-7 text-gray-700 dark:text-gray-300">
-            We are so excited to celebrate our wedding with you all! Here is
-            what to expect during our wedding day.
+            Glad you are considering joining me for my birthday party. The main activity will be racing, but there will be arcade games and food for those who do not wish to drive karts.
           </p>
         </div>
         <div className="space-y-4 pb-8 pt-6 md:space-y-5">

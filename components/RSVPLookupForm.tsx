@@ -19,6 +19,7 @@ const RSVPLookupForm: FC = () => {
       body: JSON.stringify({ first_name, last_name }),
     });
 
+    console.log(first_name, last_name);
     const data = await response.json();
 
     if (data.error) {

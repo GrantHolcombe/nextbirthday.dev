@@ -6,8 +6,8 @@ import Header from "@/components/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NextWedding.dev",
-  description: "Your Next Wedding Site is here.",
+  title: "Grants K1 Birthday",
+  description: "{site_config.description}"
 };
 
 export default function RootLayout({

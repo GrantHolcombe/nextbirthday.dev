@@ -8,24 +8,24 @@ export const faqs_data = [
     answer: "1234 Emacs Avenue, Cupertino, CA 91234",
   },
   {
-    question: "Is there a dress code?",
+    question: "How much is K1 Speed?",
     answer:
-      '"California Cocktail Attire": We encourage semi-formal attire to create a pleasant atmosphere, recommending button-up shirts with ties and dress pants.',
+      '3 adult races will be pre-paid as part of the party package. Child sessions or additonal adults beyond our group buy will be at the venues current rate shown HERE:',
   },
   {
-    question: "Where can I stay?",
+    question: "How fast are K1 Speed’s go karts?",
     answer:
-      "There is a list of hotels and travel recommendations on the Travel page. We also recommend looking into AirBnb for some good options that are even closer to the venue.",
+      "K1 Speed’s 20-horsepower electric adult go karts can reach speeds of up to 45 miles per hour – the fastest in the industry. The Junior karts can reach speeds of up to 20 miles per hour.",
   },
   {
-    question: "Are children welcome?",
+    question: "How tall do you have to be to race at K1 Speed?",
     answer:
-      "Please check your RSVP form; if your children are listed, they are warmly invited to join us. We have tailored each invitation to ensure a joyful and comfortable celebration for all our guests.",
+      "All junior racers will need to be at least 48” (4’) tall to race on track. All teen/adult racers will need to be at least 58” (4’10”) to race our larger, faster go-karts. IMPORTANT: Meeting the height requirement is not a guarantee you’ll be able to race our karts. Drivers will be measured at the location and must be able to safely operate all elements of the kart. Final approval will be at management’s discretion.",
   },
   {
-    question: "Can I bring a guest?",
+    question: "How old do you have to be to race at K1 Speed?",
     answer:
-      "Due to venue capacity and budgetary restrictions we are unable to offer everyone a +1, and we appreciate your understanding. If your RSVP form doesn't show a guest, and you feel it is a mistake, please just reach out to us to clear it up.",
+      "There is no age requirement to race at K1 Speed, just a height requirement of at least 48″.",
   },
   {
     question: "Where do I park?",
