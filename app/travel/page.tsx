@@ -8,44 +8,15 @@ export default function Travel() {
             Travel
           </h1>
           <p className="text-center marcellus-regs text-lg leading-7 text-gray-700 dark:text-gray-300">
-            Below are a list of hotels in the area. We also recommend searching
-            &apos;systemctl weddings&apos; in{" "}
-            <a
-              className="text-blue-500"
-              href="https://www.airbnb.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Airbnb
-            </a>{" "}
-            as there are several options very close to the venue there as well.
+            Below is the location of the K1 Speed venue and their contact info should you have any questions for them.
           </p>
         </div>
-        <div className="container py-4">
-          <div className="flex flex-wrap -m-4">
-            {hotel_data.map((hotel, index) => (
-              <div key={index} className="p-4 w-full md:w-1/2 lg:w-1/3">
-                <div className="h-full overflow-hidden rounded-md dark:bg-gray-950 bg-white flex flex-col justify-center">
-                  <h2 className="marcellus-bold text-xl font-semibold text-gray-900 dark:text-gray-100">
-                    {hotel.title}
-                  </h2>
-                  <p className="marcellus-regs text-lg dark:text-gray-400">
-                    <span className="marcellus-bold">({hotel.distance})</span>{" "}
-                    <br /> {hotel.phone_number} <br /> {hotel.address} <br />{" "}
-                    {hotel.city_state_zip} <br />
-                    <a
-                      className="text-blue-500"
-                      href={hotel.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Website
-                    </a>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div>
+          <a className="address m-5" type="http://schema.org/PostalAddress" target="_blank" href="https://www.google.com/maps/place/881+District+Pl,+Chula+Vista,+CA+91914/data=!4m2!3m1!1s0x80d945110c7b1657:0xccabb353ec955ded?sa=X&amp;ved=2ahUKEwjkr53428aBAxUOFjQIHWwsAIMQ8gF6BAgcEAA&amp;ved=2ahUKEwjkr53428aBAxUOFjQIHWwsAIMQ8gF6BAgdEAI"><br />
+            <span className="addressLocality">K1 Speed</span><br />
+            <span className="streetAddress">881 DISTRICT PL.</span><br />
+            <span className="addressLocality">CHULA VISTA</span>, <span className="addressRegion">CA</span><span className="postalCode"> 91914</span>
+          </a>
         </div>
       </div>
     </>

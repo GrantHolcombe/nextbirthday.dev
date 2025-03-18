@@ -1,8 +1,9 @@
 const site_config = {
-  title: "Grants Birthday",
+  title: "Grant's Birthday",
   author: "Grant",
   header_title: "I am speed",
-  description: "Its my birthday",
+  description: "Karting at K1 Chula Vista",
+  eventDate: "2025-07-25T22:00:00.000Z",
   language: "en-us",
   theme: "system", // system, dark or light
   site_url: process.env.SITE_URL,
