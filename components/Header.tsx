@@ -22,6 +22,7 @@ const Header = () => {
             <div className="mr-3">
               <Image
                 src="/static/images/wheel.svg"
+                className="hover:-rotate-180 transition-all transform duration-300"
                 alt="my logo"
                 width={50}
                 height={50}

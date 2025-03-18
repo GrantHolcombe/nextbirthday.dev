@@ -1,4 +1,3 @@
-import { hotel_data } from "@/data/travel_hotel_info";
 export default function Travel() {
   return (
     <>
