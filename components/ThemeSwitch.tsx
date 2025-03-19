@@ -7,7 +7,15 @@ const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  function getSystemTheme() {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    } else {
+      return 'light';
+    }
+  }
+
+  useEffect(() => {setTheme(getSystemTheme()); setMounted(true);}, []);
 
   if (!mounted) {
     return null;
