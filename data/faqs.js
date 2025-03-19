@@ -1,11 +1,14 @@
+import site_config from "./site_config";
+import moment from "moment";
+
 export const faqs_data = [
   {
     question: "What time should I arrive?",
-    answer: "Please arrive at 5:30pm.",
+    answer: `Please arrive at ${moment(site_config.eventDate).format("h:mma")}.`,
   },
   {
     question: "Where is the venue?",
-    answer: "1234 Emacs Avenue, Cupertino, CA 91234",
+    answer: site_config.address,
   },
   {
     question: "How much is K1 Speed?",

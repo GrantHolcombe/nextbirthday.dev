@@ -8,11 +8,7 @@ export default function FAQS() {
             FAQs
           </h1>
           <p className="text-center marcellus-regs text-lg leading-7 text-gray-700 dark:text-gray-300">
-            Below is a list of frequently asked questions with answers. For
-            further questions not listed, feel free to contact our &apos;wedding
-            coordinators&apos;—actually, it&apos;s just us, Bob and Alice! Reach
-            out via text, email, or WhatsApp; we&apos;re ready to help with
-            anything you need.
+            Tried my best to outline some common K1 questions, but feel free to reach out if you have any others.
           </p>
         </div>
         <div className="container py-2">

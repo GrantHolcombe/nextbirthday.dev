@@ -65,7 +65,7 @@ export default function Schedule() {
                   <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
                     Food & Arcade
                   </h2>
-                  <p className="prose m-3 max-w-none text-gray-700 dark:text-gray-300">
+                  <p className="prose max-w-none text-gray-700 dark:text-gray-300">
                     {moment(site_config.eventDate).format("MMMM Do, YYYY")} <br /><br />
                     For those that do not wish to race karts or in between sessions for those that are racing, there will be arcade games and food available.
                     Depending again on headcount we may have a private room. However even if this is not the case there will be plenty of room and activities for partiers of all ages.
