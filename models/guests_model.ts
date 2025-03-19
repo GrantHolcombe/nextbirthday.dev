@@ -5,6 +5,7 @@ export interface Guest {
   first_name: string;
   last_name: string;
   rsvp_status: string;
+  race_participant: string;
   notes: string | null;
   active: boolean;
 }
@@ -51,14 +52,15 @@ export const get_guest_info_from_name = async (
 export const update_rsvp_info = async (
   guest_id: number,
   rsvp_status: string,
+  race_participant: string,
 ) => {
   try {
     const query = `
       UPDATE guests 
-      SET rsvp_status = $2 
+      SET rsvp_status = $2 , race_participant = $3
       WHERE guest_id = $1
     `;
-    await pool.query(query, [guest_id, rsvp_status]);
+    await pool.query(query, [guest_id, rsvp_status, race_participant]);
   } catch (err) {
     console.error("Error updating status", err);
   }
@@ -69,17 +71,17 @@ export const update_rsvp_info_many = async (guestData: Guest[]) => {
     const tempValues = guestData
       .map(
         (g) =>
-          `(${g.guest_id}, '${g.first_name}', '${g.last_name}', '${g.rsvp_status}')`,
+          `(${g.guest_id}, '${g.first_name}', '${g.last_name}', '${g.rsvp_status}', '${g.race_participant}')`,
       )
       .join(", ");
 
     const query = `
-      WITH updates(guest_id, first_name, last_name, rsvp_status) AS (
+      WITH updates(guest_id, first_name, last_name, rsvp_status, race_participant) AS (
         VALUES
           ${tempValues}
       )
       UPDATE guests 
-      SET rsvp_status = updates.rsvp_status, first_name = updates.first_name, last_name = updates.last_name 
+      SET race_participant = updates.race_participant, rsvp_status = updates.rsvp_status, first_name = updates.first_name, last_name = updates.last_name 
       FROM updates
       WHERE guests.guest_id = updates.guest_id;
     `;
@@ -102,6 +104,7 @@ export const get_main_and_secondary_guests = async (
     first_name,
     last_name,
     rsvp_status,
+    race_participant,
     notes,
     active
   FROM 

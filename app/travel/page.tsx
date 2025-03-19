@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Travel() {
   return (
     <>
@@ -11,10 +13,16 @@ export default function Travel() {
           </p>
         </div>
         <div>
-          <a className="address m-5" type="http://schema.org/PostalAddress" target="_blank" href="https://www.google.com/maps/place/881+District+Pl,+Chula+Vista,+CA+91914/data=!4m2!3m1!1s0x80d945110c7b1657:0xccabb353ec955ded?sa=X&amp;ved=2ahUKEwjkr53428aBAxUOFjQIHWwsAIMQ8gF6BAgcEAA&amp;ved=2ahUKEwjkr53428aBAxUOFjQIHWwsAIMQ8gF6BAgdEAI"><br />
-            <span className="addressLocality">K1 Speed</span><br />
-            <span className="streetAddress">881 DISTRICT PL.</span><br />
-            <span className="addressLocality">CHULA VISTA</span>, <span className="addressRegion">CA</span><span className="postalCode"> 91914</span>
+          <a className="address m-5 flex flex-col-reverse md:flex-row" type="http://schema.org/PostalAddress" target="_blank" href="https://www.google.com/maps/search/k1+chula+vista/@32.6582231,-117.0059939,12.91z?entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoASAFQAw%3D%3D"><br />
+            <div className="w-full md:w-1/2">
+              <Image src={"/static/images/map.png"} alt="map of chula vista" width={544} height={306} className="rounded-md" />
+            </div>
+            <div className="w-full md:w-1/2 flex flex-col justify-center my-5 md:mx-5">
+              <span className="addressLocality">K1 Speed</span>
+              <span className="streetAddress">881 DISTRICT PL.</span>
+              <span className="addressLocality">CHULA VISTA, CA 91914</span>
+              <span className="addressPhone">+1 (619)-600-3200</span>
+            </div>
           </a>
         </div>
       </div>
