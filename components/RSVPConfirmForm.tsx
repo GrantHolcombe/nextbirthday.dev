@@ -74,7 +74,7 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
       <>
         <form onSubmit={handleSubmit} className="w-full p-4 space-y-4">
           <p className="text-gray-700 dark:text-gray-300">
-            Please confirm the status of you {updatedGuests.length > 1 ? updatedGuests.length > 2 ? "and your guests" : "and your guest" : null}. You can edit your names if desired, but please also indicate if you plan on attending 
+            Please confirm the status of you{updatedGuests.length > 1 ? updatedGuests.length > 2 ? "and your guests" : "and your guest" : "rself"}. You can edit your names if desired, but please also indicate if you plan on attending 
             as well as which members of your party would like to participate in race sessions.
           </p>
 

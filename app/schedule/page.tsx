@@ -19,7 +19,7 @@ export default function Schedule() {
             Arrival Time
             <br></br>
             <span className="marcellus-regs non-bold text-xl">
-              {moment(site_config.eventDate).format("MMMM Do, YYYY [@] h:mm a")}
+              {moment(site_config.eventDate).format("dddd MMMM Do, YYYY [at] h:mma")}
             </span>
           </p>
           <p className="text-center marcellus-regs text-gray-700 dark:text-gray-300 text-md leading-7">
@@ -42,9 +42,8 @@ export default function Schedule() {
                     Racing
                   </h2>
                   <p className="prose mb-3 max-w-none text-gray-700 dark:text-gray-300">
-                    {moment(site_config.eventDate).format("MMMM Do, YYYY")} time TBD <br /><br /> 
-                    Depending on head count for race paticipation we will run 2-3 sessions. 
-                    Sessions will be 12 laps for qualifiying where best lap time is the objective, and one 14 lap main event where racing will be for track position. 
+                    Arrive: {moment(site_config.eventDate).format("h:mma")} first session: {moment(site_config.eventDate).add(45, "minutes").format("h:mma")} <br /><br /> 
+                    The amount of racing you would like to do is up to each person. I will be running 3 races, and if we get 7 more people to commit to 3 races we can upgrade to a private party. Its totally fine to come and not race or if just your kids want to try once, the goal is to have fun. 
                     <br /><br />
                     Additionally if there are enough children over 48{`"`} tall that can responsibly listen to instructions, there is the possibility of having a kids race on the smaller and slower junior karts. <br />
                     <br />
@@ -66,9 +65,11 @@ export default function Schedule() {
                     Food & Arcade
                   </h2>
                   <p className="prose max-w-none text-gray-700 dark:text-gray-300">
-                    {moment(site_config.eventDate).format("MMMM Do, YYYY")} <br /><br />
+                    {moment(site_config.eventDate).format("h:mma")} until {moment(site_config.eventDate).add(2, 'hours').format("h:mma")} <br /><br />
                     For those that do not wish to race karts or in between sessions for those that are racing, there will be arcade games and food available.
                     Depending again on headcount we may have a private room. However even if this is not the case there will be plenty of room and activities for partiers of all ages.
+                    <br /><br />
+                    K1 offers beer and wine for those 21 and older who would like to enjoy responsibly.
                     <br />
                   </p>
                 </div>
