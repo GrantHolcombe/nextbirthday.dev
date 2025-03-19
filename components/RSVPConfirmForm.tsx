@@ -70,11 +70,10 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
   return (
     <div className="flex flex-col items-center justify-center container mx-auto py-2">
       <>
-        <form onSubmit={handleSubmit} className="w-full md:w-1/2 p-4 space-y-4">
+        <form onSubmit={handleSubmit} className="w-full p-4 space-y-4">
           <p className="text-gray-700 dark:text-gray-300">
-            Please confirm the status of you and your guest(s). Edit the name to
-            reflect what you want to appear on the table as needed, and confirm
-            RSVP status.
+            Please confirm the status of you and your guest(s). You can edit your names if desired, but please also indicate if you plan on attending 
+            as well as which members of your party would like to participate in race sessions.
           </p>
 
           <table className="min-w-full bg-white dark:bg-gray-950">
@@ -88,6 +87,9 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
                 </th>
                 <th className="border dark:border-gray-600 p-2 text-gray-900 dark:text-gray-200">
                   Going?
+                </th>
+                <th className="border dark:border-gray-600 p-2 text-gray-900 dark:text-gray-200">
+                  Racing?
                 </th>
               </tr>
             </thead>
@@ -139,6 +141,25 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
                       <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                     </label>{" "}
                   </td>
+                  <td className="border dark:border-gray-600 p-2">
+                    <label className="relative inline-flex items-center cursor-pointer">
+                      <input
+                        type="checkbox"
+                        value=""
+                        className="sr-only peer"
+                        checked={guest.race_participant === "true"}
+                        onChange={() => {
+                          const newGuests = [...updatedGuests];
+                          newGuests[idx].race_participant =
+                            guest.race_participant === "true"
+                              ? "false"
+                              : "true";
+                          setUpdatedGuests(newGuests);
+                        }}
+                      />
+                      <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    </label>{" "}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -147,7 +168,7 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
           <div>
             <button
               type="submit"
-              className="w-full max-w-lg mx-auto mt-2 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+              className="w-full max-w-lg block mx-auto mt-2 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
             >
               Submit
             </button>

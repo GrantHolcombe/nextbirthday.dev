@@ -1,4 +1,6 @@
 import Image from "@/components/Image";
+import moment from "moment";
+import site_config from "@/data/site_config";
 
 export default function Schedule() {
   return (
@@ -17,12 +19,11 @@ export default function Schedule() {
             Arrival Time
             <br></br>
             <span className="marcellus-regs non-bold text-xl">
-              {" "}
-              June 1st, 2024. 5:30 PM{" "}
+              {moment(site_config.eventDate).format("MMMM Do, YYYY [@] h:mm a")}
             </span>
           </p>
           <p className="text-center marcellus-regs text-gray-700 dark:text-gray-300 text-md leading-7">
-            1234 Emacs Avenue, Cupertino, CA 91234
+            {site_config.address}
           </p>
         </div>
         <div className="container py-12">
@@ -31,20 +32,22 @@ export default function Schedule() {
               <div className="h-full overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700">
                 <Image
                   alt="Ceremony"
-                  src="/static/images/ceremony.jpg"
+                  src="/static/images/pits.jpg"
                   className="object-cover object-center md:h-36 lg:h-48"
                   width={544}
                   height={306}
                 />
                 <div className="p-6">
                   <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
-                    Ceremony
+                    Racing
                   </h2>
                   <p className="prose mb-3 max-w-none text-gray-700 dark:text-gray-300">
-                    June 1st, 2024. 6:00pm - 6:30pm <br></br> Join us for our
-                    wedding ceremony! It will be located outdoors at the
-                    Lakeside Arbor of the Cupertino Estate by systemctl
-                    Weddings. <br></br>
+                    {moment(site_config.eventDate).format("MMMM Do, YYYY")} time TBD <br /><br /> 
+                    Depending on head count for race paticipation we will run 2-3 sessions. 
+                    Sessions will be 12 laps for qualifiying where best lap time is the objective, and one 14 lap main event where racing will be for track position. 
+                    <br /><br />
+                    Additionally if there are enough children over 48{`"`} tall that can responsibly listen to instructions, there is the possibility of having a kids race on the smaller and slower junior karts. <br />
+                    <br />
                   </p>
                 </div>
               </div>
@@ -53,21 +56,20 @@ export default function Schedule() {
               <div className="h-full overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700">
                 <Image
                   alt="reception"
-                  src="/static/images/reception.webp"
+                  src="/static/images/arcade.jpg"
                   className="object-cover object-center md:h-36 lg:h-48"
                   width={544}
                   height={306}
                 />
                 <div className="p-6">
                   <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
-                    Reception
+                    Food & Arcade
                   </h2>
-                  <p className="prose mb-3 max-w-none text-gray-700 dark:text-gray-300">
-                    June 1st, 2024. 6:30pm - 11:00pm <br></br>
-                    The reception will include a dinner, and open bar, dancing,
-                    card games, and much much more! Please join us in the
-                    celebration of our marriage in this epic reception.{" "}
-                    <br></br>
+                  <p className="prose m-3 max-w-none text-gray-700 dark:text-gray-300">
+                    {moment(site_config.eventDate).format("MMMM Do, YYYY")} <br /><br />
+                    For those that do not wish to race karts or in between sessions for those that are racing, there will be arcade games and food available.
+                    Depending again on headcount we may have a private room. However even if this is not the case there will be plenty of room and activities for partiers of all ages.
+                    <br />
                   </p>
                 </div>
               </div>
