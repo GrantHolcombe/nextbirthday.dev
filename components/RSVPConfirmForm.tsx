@@ -1,6 +1,8 @@
 import { FC, useState, FormEvent } from "react";
 import { Guest } from "@/models/guests_model";
 import Link from "next/link";
+import site_config from "@/data/site_config";
+import moment from "moment";
 
 interface Props {
   guests: Guest[];
@@ -37,11 +39,11 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
 
         if (updatedGuests.some((guest) => guest.rsvp_status === "Going")) {
           setSubmissionMessage(
-            "Thank you for submitting your RSVP info! We look forward to sharing our special day with you. Please remember to mark your calender for June 1st, 2024 to arrive at 5:30pm!",
+            `Thank you for submitting your RSVP info! We look forward to racing with you. Please remember to mark your calender for ${moment(site_config.eventDate).format("MMM Do, YYYY [to arrive at] h:mma")}!`,
           );
         } else {
           setSubmissionMessage(
-            "Thank you for submitting your RSVP info! We are sorry you are unable to attend!",
+            "Thank you for submitting your RSVP info! Sorry you are unable to attend!",
           );
         }
       } else {
@@ -72,7 +74,7 @@ const RSVPConfirmForm: FC<Props> = ({ guests }) => {
       <>
         <form onSubmit={handleSubmit} className="w-full p-4 space-y-4">
           <p className="text-gray-700 dark:text-gray-300">
-            Please confirm the status of you and your guest(s). You can edit your names if desired, but please also indicate if you plan on attending 
+            Please confirm the status of you{updatedGuests.length > 1 ? updatedGuests.length > 2 ? "and your guests" : "and your guest" : "rself"}. You can edit your names if desired, but please also indicate if you plan on attending 
             as well as which members of your party would like to participate in race sessions.
           </p>
 
