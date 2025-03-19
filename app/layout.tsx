@@ -3,11 +3,12 @@ import { HeaderProvider } from "@/utils/HeaderContext";
 import { ThemeProviders } from "./theme-providers";
 import SectionContainer from "@/components/SectionContainer";
 import Header from "@/components/Header";
+import site_config from "@/data/site_config";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Grants K1 Birthday",
-  description: "{site_config.description}"
+  description: `${site_config.description}`
 };
 
 export default function RootLayout({
