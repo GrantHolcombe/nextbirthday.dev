@@ -21,7 +21,7 @@ export default function Home() {
       </div>
       <div className="container py-2">
         <div className="-m-4 flex flex-wrap">
-          <div className="md max-w-[544px] p-2 md:w-1/2">
+          <div className="md max-w-[544px] flex p-2 md:w-1/2">
             <Image
               src={"/static/images/karts.jpg"}
               alt="avatar"
@@ -31,7 +31,7 @@ export default function Home() {
               // buffer
             />
           </div>
-          <div className="md max-w-[544px] p-2 md:w-1/2">
+          <div className="md max-w-[544px] flex p-2 md:w-1/2">
             <Image
               src={"/static/images/track.jpg"}
               alt="avatar"

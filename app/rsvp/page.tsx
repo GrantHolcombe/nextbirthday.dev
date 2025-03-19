@@ -10,7 +10,7 @@ export default function RSVP() {
             RSVP
           </h1>
           <p className="text-center marcellus-regs text-lg leading-7 text-gray-700 dark:text-gray-300">
-            Please let us know if you are going to join us on our wedding day!
+            Please let me know if you are going to join us for my birthday and if you would like to be part of the racing action!
           </p>
         </div>
         <RSVPLookupForm />
